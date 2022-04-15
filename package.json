@@ -1,0 +1,22 @@
+{
+  "name": "ecommerce-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waed-hamza/Ecommerce-app.git"
+  },
+  "author": "Waed Hafitha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waed-hamza/Ecommerce-app/issues"
+  },
+  "homepage": "https://github.com/waed-hamza/Ecommerce-app#readme",
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
+}
