@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/template1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/landing.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto:wght@300;900&family=Rubik&display=swap" rel="stylesheet">
+    <!-- title -->
+    <title>Waed Tech Shop</title>
+</head>
+<body>
+    <header>
+        <!-- 1. logo container -->
+        <div id="logo-container">
+            <a href="#">
+                <img src="./images/template1.png" alt="logo">
+                <h1>WaedTech</h1>
+            </a>
+        </div>
+
+        <!-- 2. search container -->
+        <div id="search-container">
+            <input type="search" placeholder="Search for products...">
+            <button type="submit">
+                <svg viewBox="0 0 20 20" version="1.1" aria-hidden="true">
+                    <title>search</title>
+                    <path class="icon-main-color" d="M3.4 11.56a5.77 5.77 0 1 1 8.16 0 5.78 5.78 0 0 1-8.16 0zM20 18.82l-6.68-6.68a7.48 7.48 0 1 0-1.18 1.18L18.82 20 20 18.82z"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- 3. buyer, seller container -->
+        <div id="buyer-seller-container">
+            <button id="buyer">Buyer</button>
+            <button id="seller">Seller</button>
+        </div>
+
+        <!-- 4. cart container -->
+        <div id="cart-container">
+            <div id="cart-icon">
+                <img src="./images/cart.webp" alt="cartIcon">
+                <span id="added-products-count"></span>
+            </div>
+            <div id="price-container">
+                <a href="#"><span>Cart</span></a>
+                <span id="total-price">0$</span>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --blue: #0E8CE4;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #a19a9a;
+    --lightGray: #e5e5e5;
+    --darkGray: #7f7f7f;
+    --transparentBlack: #000000CC;
+    --fontFamily: 'Rubik', sans-serif;
+  }
+
+body {
+    font-family: var(--fontFamily);
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid var(--lightGray);
+}
+
+#logo-container a {
+    display: flex;
+    align-items: center;
+}
+
+#logo-container h1 {
+    color: var(--blue);
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+#search-container {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    
+}
+
+#search-container input {
+    width: 260px;
+    height: 40px;
+    border: 1px solid var(--lightGray);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 0px 10px;
+    font-size: 15px;
+    color: var(--darkGray);
+    outline: none;
+}
+
+#search-container button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: var(--blue);
+    border: none;
+    outline: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#search-container button svg {
+    fill: var(--white);
+    width: 20px;
+}
+
+#buyer-seller-container button {
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#buyer {
+    background-color: var(--white);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+#buyer:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    transition: all;
+    transition-duration: 1s;
+}
+
+#seller {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+}
+
+#seller:hover {
+    background-color: var(--white);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    transition: all;
+    transition-duration: 1s;
+}
+
+#cart-container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    position: relative;
+}
+
+#added-products-count {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    top: 33px;
+    left: 15px;
+    width: 15px;
+    height: 15px;
+}
+
+#price-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 23px;
+    font-size: 20px;
+}
+
+#price-container a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+#total-price {
+    font-size: 14px;
+    color: var(--gray);
+    margin-top: 3px;
+}
