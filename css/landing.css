@@ -285,14 +285,17 @@ header {
 #products {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 50px;
 }
 
 .product {
-    width: 200px;
+    width: 250px;
+    height: 400px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     border: 1px solid var(--lightGray);
     border-radius: 10px;
     margin: 20px;
@@ -300,9 +303,10 @@ header {
 }
 
 .product img {
-    width: 87%;
+    max-width: 80%;
+    height: 50%;
     align-self: center;
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
 }
 
 .product:hover img {
@@ -320,7 +324,7 @@ header {
 
 .product-name {
     align-self: center;
-    padding-bottom: 15px;
+    padding: 0px 10px 15px 10px;
     font-size: 18px;
 }
 

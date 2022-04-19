@@ -25,8 +25,8 @@
 
         <!-- 2. search container -->
         <div id="search-container">
-            <input type="search" placeholder="Search for products...">
-            <button type="submit">
+            <input type="search" placeholder="Search for products..." id="search-input">
+            <button type="submit" id="search-btn">
                 <svg viewBox="0 0 20 20" version="1.1" aria-hidden="true">
                     <title>search</title>
                     <path class="icon-main-color" d="M3.4 11.56a5.77 5.77 0 1 1 8.16 0 5.78 5.78 0 0 1-8.16 0zM20 18.82l-6.68-6.68a7.48 7.48 0 1 0-1.18 1.18L18.82 20 20 18.82z"></path>
@@ -44,7 +44,7 @@
         <div id="cart-container">
             <div id="cart-icon">
                 <img src="./images/cart.webp" alt="cartIcon">
-                <span id="added-products-count"></span>
+                <span id="added-products-count">0</span>
             </div>
             <div id="price-container">
                 <a href="#"><span>Cart</span></a>
@@ -63,9 +63,6 @@
                 </button>
 
                 <ul id="categories-list">
-                    <li>Lorem ipsum</li>
-                    <li>Lorem</li>
-                    <li>ipsum</li>
                 </ul>
             </div>
 
@@ -78,7 +75,7 @@
                     </button>
                     <div class="filter-options">
                         <span id="lowToHigh">Low -> High</span>
-                        <span id="HighToLow">High -> Low</span>
+                        <span id="highToLow">High -> Low</span>
                     </div>
                 </div>
 
@@ -100,75 +97,6 @@
         <!-- 2. products -->
         <div id="products">
             <!-- product: photo, price, name, add to cart -->
-            <div class="product">
-                <img src="./images/camera1.jpg">
-                <span class="product-price">$225</span>
-                <span class="product-name">Canon STM</span>
-                <button class="add-cart-btn">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="./images/camera1.jpg">
-                <span class="product-price">$225</span>
-                <span class="product-name">Canon STM</span>
-                <button class="add-cart-btn">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="./images/camera1.jpg">
-                <span class="product-price">$225</span>
-                <span class="product-name">Canon STM</span>
-                <button class="add-cart-btn">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="./images/camera1.jpg">
-                <span class="product-price">$225</span>
-                <span class="product-name">Canon STM</span>
-                <button class="add-cart-btn">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="./images/camera1.jpg">
-                <span class="product-price">$225</span>
-                <span class="product-name">Canon STM</span>
-                <button class="add-cart-btn">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="./images/camera1.jpg">
-                <span class="product-price">$225</span>
-                <span class="product-name">Canon STM</span>
-                <button class="add-cart-btn">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="./images/camera1.jpg">
-                <span class="product-price">$225</span>
-                <span class="product-name">Canon STM</span>
-                <button class="add-cart-btn">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="./images/camera1.jpg">
-                <span class="product-price">$225</span>
-                <span class="product-name">Canon STM</span>
-                <button class="add-cart-btn">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="./images/camera1.jpg">
-                <span class="product-price">$225</span>
-                <span class="product-name">Canon STM</span>
-                <button class="add-cart-btn">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="./images/camera1.jpg">
-                <span class="product-price">$225</span>
-                <span class="product-name">Canon STM</span>
-                <button class="add-cart-btn">Add to Cart</button>
-            </div>
         </div>
 
 
@@ -251,6 +179,8 @@
     </main>
 
 
+    <script type="module" src="./scripts/landing.js"></script>
+    <script type="module" src="./scripts/productsData.js"></script>
     <script>
         myFunction = () => {
             let list = document.getElementById('categories-list');
