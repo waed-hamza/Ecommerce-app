@@ -1,6 +1,4 @@
-import productsData from "./productsData.js";
-
-const initialProducts = [...productsData];
+const initialProducts = JSON.parse(localStorage.getItem("productsData"));
 let productsContainer = document.getElementById("products");
 
 // categories
@@ -20,6 +18,8 @@ let searchInput = document.getElementById("search-input");
 // cart: number of added products || and Add to cart Btn
 let addedProductsCount = document.getElementById("added-products-count");
 let addToCartBtn = document.getElementsByClassName("add-cart-btn");
+let totalPriceInCart = document.getElementById("total-price");
+let addedProducts = JSON.parse(sessionStorage.getItem("addedProducts"));
 
 // Display products function
 const displayProducts = (products) => {
@@ -121,6 +121,36 @@ categoriesList.addEventListener("click", (e) => {
 // Add to Cart btn
 for (let i = 0; i < addToCartBtn.length; i++) {
   addToCartBtn[i].addEventListener("click", (e) => {
-    addedProductsCount.innerText = parseInt(addedProductsCount.innerText) + 1;
+    // increment count
+    incrementAddedCount();
+
+    // increment price
+    let productPrice = e.target.previousSibling.previousSibling.innerText;
+    incrementTotalPrice(productPrice);
+
+    // update addedProducts array
+    let productName = e.target.previousSibling.innerText;
+    updateAddedProducts(productName);
   });
 }
+
+const incrementAddedCount = () => {
+  addedProductsCount.innerText = parseInt(addedProductsCount.innerText) + 1;
+};
+
+const incrementTotalPrice = (price) => {
+  let productPrice = Number(price.substring(2));
+  let totalPrice =
+    Number(totalPriceInCart.innerText.substring(1)) + productPrice;
+
+  totalPriceInCart.innerText = "$" + totalPrice;
+};
+
+const updateAddedProducts = (productName) => {
+  let addedProduct = initialProducts.filter((el) => {
+    return el.name == productName;
+  });
+
+  addedProducts.push({ ...addedProduct });
+  sessionStorage.setItem("addedProducts", JSON.stringify(addedProducts));
+};

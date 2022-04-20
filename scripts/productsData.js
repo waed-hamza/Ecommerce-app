@@ -122,4 +122,5 @@ let productsData = [
   },
 ];
 
-export default productsData;
+localStorage.setItem("productsData", JSON.stringify(productsData));
+sessionStorage.setItem("addedProducts", JSON.stringify([]));
