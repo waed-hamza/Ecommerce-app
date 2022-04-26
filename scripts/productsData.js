@@ -1,3 +1,5 @@
+let productsDataStorage = JSON.parse(localStorage.getItem("productsData"));
+
 // product: photo, price, name, category
 let productsData = [
   {
@@ -111,7 +113,7 @@ let productsData = [
   {
     imgSrc: "./images/laptop5.jpg",
     price: "100",
-    name: "HP  Chromebook",
+    name: "HP Chromebook",
     category: "Laptops",
   },
   {
@@ -122,5 +124,7 @@ let productsData = [
   },
 ];
 
-localStorage.setItem("productsData", JSON.stringify(productsData));
-sessionStorage.setItem("addedProducts", JSON.stringify([]));
+localStorage.setItem(
+  "productsData",
+  JSON.stringify(productsDataStorage ? productsDataStorage : productsData)
+);

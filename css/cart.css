@@ -1,0 +1,146 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --blue: #0E8CE4;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #a19a9a;
+    --lightGray: #e5e5e5;
+    --darkGray: #7f7f7f;
+    --transparentBlack: #000000CC;
+    --red: #fc2f2f;
+    --fontFamily: 'Rubik', sans-serif;
+  }
+
+body {
+    font-family: var(--fontFamily);
+}
+
+
+/* Header */
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid var(--lightGray);
+}
+
+#logo-container a {
+    display: flex;
+    align-items: center;
+}
+
+#logo-container h1 {
+    color: var(--blue);
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+/* Products */
+#products {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 60%;
+}
+
+.product {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid var(--lightGray);
+    box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.img-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product img {
+    max-width: 70%;
+    align-self: center;
+}
+
+.infromation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35%;
+}
+
+.product-price {
+    padding: 15px 0px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.product-name {
+    font-size: 22px;
+}
+
+.remove-cart-btn {
+    height: 45px;
+    width: 100%;
+    margin-top: 50px;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.remove-cart-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* total price */
+#total-price {
+    width: 30%;
+    height: 300px;
+    border: 1px solid var(--lightGray);
+    box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#total-price span:first-child {
+    color: var(--blue);
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#total-price span:last-child {
+    font-size: 30px;
+    font-weight: 600;
+}

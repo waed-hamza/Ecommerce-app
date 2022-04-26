@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/template1.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/seller.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto:wght@300;900&family=Rubik&display=swap" rel="stylesheet">
+    <!-- title -->
+    <title>Waed Tech Shop</title>
+</head>
+<body>
+    <header>
+        <!-- 1. logo container -->
+        <div id="logo-container">
+            <a href="../index.html">
+                <img src="../images/template1.png" alt="logo">
+                <h1>WaedTech</h1>
+            </a>
+        </div>
+
+        <!-- 2. search container -->
+        <div id="search-container">
+            <input type="search" placeholder="Search for products..." id="search-input">
+            <button type="submit" id="search-btn">
+                <svg viewBox="0 0 20 20" version="1.1" aria-hidden="true">
+                    <title>search</title>
+                    <path class="icon-main-color" d="M3.4 11.56a5.77 5.77 0 1 1 8.16 0 5.78 5.78 0 0 1-8.16 0zM20 18.82l-6.68-6.68a7.48 7.48 0 1 0-1.18 1.18L18.82 20 20 18.82z"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- 3. buyer, seller container -->
+        <div id="buyer-seller-container">
+            <button id="buyer">Buyer</button>
+        </div>
+
+        <!-- 4. add product -->
+        <div id="add-product-container">
+            <button id="add-product-btn">
+                Add Product 
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Editing, add product form -->
+        <div id="form-container">
+            <!-- 1. close icon -->
+            <div id="close-form-container">
+                <button id="close-btn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <span id="product-details-text">PRODUCT DETAILS: </span>
+
+            <!-- 2. inputs -->
+            <form id="form" method="get">
+                <!-- 1. product name -->
+                <label for="product-name">
+                    <span>Product Name:</span> 
+                    <input 
+                        type="text" 
+                        name="productName" 
+                        id="product-name" 
+                        placeholder="Enter the name of the product..."
+                        required
+                    >
+                </label>
+                
+                <!-- 2. price -->
+                <label for="product-price">
+                    <span>Product Price:</span>
+                    <input 
+                        type="number" 
+                        name="productPrice" 
+                        id="product-price" 
+                        placeholder="Enter the price of the product..."
+                        required
+                    > 
+                </label>
+
+                <!-- 3. product image -->
+                <label for="product-image">
+                    <span>Product Image URL:</span>
+                    <input 
+                        type="text" 
+                        name="productImage" 
+                        id="product-image" 
+                        placeholder="Enter the URL of the product image..." 
+                        required
+                    > 
+                </label>
+
+                <!-- 4. product category -->
+                <label for="product-category">
+                    <span>Product Category:</span> 
+                    <select name="categories" id="categories" required>
+                        <option value="" disabled selected hidden>Choose Category...</option>
+                        <option value="Cameras">Cameras</option>
+                        <option value="Headphones">Headphones</option>
+                        <option value="Laptops">Laptops</option>
+                        <option value="SmartPhones">SmartPhones</option>
+                      </select>
+                </label>
+
+                <!-- 5. submit, cancel btns -->
+                <div id="form-btns-container">
+                    <button type="submit" id="save-btn">Save</button>
+                    <button type="submit" id="save-changes-btn">Save Changes</button>
+                    <button id="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 2. products -->
+        <div id="products">
+            <!-- product: photo, price, name, add to cart -->
+        </div>
+
+
+        <!-- 3. NewsLetter -->
+        <div id="newsletter">
+            <div id="newsletter-text">
+                <img src="../images/newsletter.webp">
+                <span>Sign up for Newsletter</span>
+            </div>
+
+            <div id="newsletter-input">
+                <input type="text" placeholder="Enter your email adress" required>
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+
+
+        <!-- 4. Footer -->
+        <footer>
+            <!-- 1. Logo -->
+            <!-- 2. Columns (Links) -->
+            <div id="logo-links-container">
+                <div id="footer-logo">
+                    <a href="#">
+                        <img src="../images/template1.png" alt="logo">
+                        <span>WaedTech</span>
+                    </a>
+                </div>
+
+                <div id="footer-links">
+                    <div class="columns">
+                        <span>Find it Fast</span>
+                        <ul>
+                            <li>
+                                <a href="#">Computers & Laptops</a>
+                            </li>
+                            <li>
+                                <a href="#">Cameras & Photos</a>
+                            </li>
+                            <li>
+                                <a href="#">Hardware</a>
+                            </li>
+                            <li>
+                                <a href="#">Smarphones & Tablets</a>
+                            </li>
+                            <li>
+                                <a href="#">TV & Audio</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="columns">
+                        <span>Customer Care</span>
+                        <ul>
+                            <li>
+                                <a href="#">My Account</a>
+                            </li>
+                            <li>
+                                <a href="#">Order Tracking</a>
+                            </li>
+                            <li>
+                                <a href="#">Customer Services</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#">Product Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Copy right -->
+            <div id="copyright">
+                <span>Copyright ©2022 All rights reserved</span>
+            </div>
+        </footer>
+    </main>
+
+
+    <script src="../scripts/seller.js"></script>
+</body>
+</html>
