@@ -393,6 +393,8 @@ select {
 /* Footer */
 footer {
     padding: 0px 100px;
+    position: relative;
+    top: 150px;
 }
 
 #logo-links-container {

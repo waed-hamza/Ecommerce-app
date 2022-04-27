@@ -31,6 +31,24 @@ let addedItems = JSON.parse(sessionStorage.getItem("addedItems"));
 let sellerBtn = document.getElementById("seller");
 let buyerBtn = document.getElementById("buyer");
 
+// JavaScript anonymous function
+(() => {
+  if (window.localStorage) {
+    // If there is no item as 'reload'
+    // in localstorage then create one &
+    // reload the page
+    if (!localStorage.getItem("reload")) {
+      localStorage["reload"] = true;
+      window.location.reload();
+    } else {
+      // If there exists a 'reload' item
+      // then clear the 'reload' item in
+      // local storage
+      localStorage.removeItem("reload");
+    }
+  }
+})();
+
 // Display products function
 const displayProducts = (products) => {
   productsContainer.innerHTML = "";
@@ -134,10 +152,12 @@ categoriesBtn.addEventListener("click", () => {
     }
   }
 
-  if (filtersContainer.style.display == "none") {
-    filtersContainer.style.display = "flex";
-  } else {
-    filtersContainer.style.display = "none";
+  if (window.innerWidth <= 500) {
+    if (filtersContainer.style.display == "none") {
+      filtersContainer.style.display = "flex";
+    } else {
+      filtersContainer.style.display = "none";
+    }
   }
 });
 
