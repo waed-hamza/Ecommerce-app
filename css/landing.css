@@ -201,7 +201,7 @@ main {
     position: absolute;
     top: 0px;
     width: 100%;
-    height: 70px;
+    height: 100%;
     background-color: var(--blue);
     color: var(--white);
     border: none;
@@ -467,4 +467,163 @@ footer {
     align-items: center;
     justify-content: center;
     color: var(--gray);
+}
+
+
+/* Responsive */
+/* Tablets */
+@media (max-width: 750px){
+    header {
+        border: none;
+    }
+
+    #search-container {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        height: 70px;
+        background-color: var(--white);
+        z-index: 1;
+        justify-content: center;
+        border-bottom: 1px solid var(--lightGray);
+    }
+
+    #search-container input {
+        width: 90%;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    #search-container button {
+        height: 50px;
+    }
+
+    main {
+        top: 150px;
+    }
+
+    #newsletter {
+        flex-direction: column;
+    }
+
+    #newsletter-text {
+        margin: 0 0 25px 0;
+    }
+
+    footer {
+        padding: 0px 20px;
+    }
+
+    #logo-links-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #footer-logo {
+        margin-bottom: 40px;
+    }
+
+    #footer-links {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .columns {
+        width: 190px;
+    }
+}
+
+
+/* Phones */
+@media (max-width: 500px){
+    header {
+        height: 60px;
+    }
+
+    #logo-container h1 {
+        font-size: 20px;
+    }
+
+    #logo-container img {
+        width: 50px;
+    }
+
+    #buyer-seller-container  button{
+        width: 55px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    #search-container {
+        top: 60px;
+        height: 60px;
+    }
+
+    #search-container input {
+        width: 80%;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    #search-container button {
+        height: 40px;
+    }
+
+    main {
+        top: 121px;
+    }
+
+    #filters-container {
+        height: 105px;
+        flex-direction: column;
+    }
+
+    #categories {
+        width: 100%;
+        height: 55px;
+    }
+
+    #categories-list {
+        margin-top: 55px;
+        z-index: 5;
+    }
+
+    #filters {
+        height: 50px;
+        margin: 0;
+    }
+
+    #newsletter-text img {
+        width: 50px;
+    }
+
+    #newsletter-text span {
+        font-size: 18px;
+    }
+
+    #newsletter-input {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #newsletter-input input {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    #newsletter-input button {
+        width: 40%;
+        height: 40px;
+        margin-top: 10px;
+        font-size: 15px;
+        padding: 0px 5px;
+        border-radius: 5px;
+    }
+
+    .columns {
+        width: 40%;
+        margin: 0px 10px;
+    }
 }

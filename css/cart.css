@@ -144,3 +144,154 @@ main {
     font-size: 30px;
     font-weight: 600;
 }
+
+
+
+/* Footer */
+footer {
+    padding: 0px 100px;
+}
+
+#logo-links-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 70px 0px;
+}
+
+#footer-logo a {
+    display: flex;
+    align-items: center;
+}
+
+#footer-logo span {
+    color: var(--blue);
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+#footer-links {
+    display: flex;
+}
+
+.columns {
+    margin: 0px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.columns span {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.columns ul {
+    list-style-type: none;
+}
+
+.columns ul li {
+    padding: 15px 0px;
+}
+
+.columns li a {
+    color: var(--gray);
+    font-size: 15px;
+}
+
+.columns li a:hover {
+    color: var(--blue);
+}
+
+#copyright {
+    height: 80px;
+    border-top: 1px solid var(--lightGray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+}
+
+
+
+/* Responsive */
+/* Tablets */
+@media (max-width: 750px){
+
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #total-price {
+        width: 90%;
+    }
+
+    #products {
+        width: 97%;
+    }
+
+    .product {
+        margin: 10px 0px;
+    }
+
+    footer {
+        padding: 0px 20px;
+    }
+
+    #logo-links-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #footer-logo {
+        margin-bottom: 40px;
+    }
+
+    #footer-links {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .columns {
+        width: 190px;
+    }
+}
+
+
+/* Phones */
+@media (max-width: 500px){
+
+    .infromation-container {
+        width: 48%;
+    }
+
+    .product {
+        height: 200px;
+    }
+
+    .product img {
+        max-width: 50%;
+    }
+
+    .product-name, .product-price {
+        font-size: 18px;
+    }
+
+    .remove-cart-btn {
+        width: 90%;
+        height: 40px;
+        font-size: 15px;
+        margin-top: 25px;
+    }
+
+    #total-price {
+        height: 200px;
+    }
+
+    .columns {
+        width: 40%;
+        margin: 0px 10px;
+    }
+}

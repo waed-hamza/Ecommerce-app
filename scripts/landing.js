@@ -11,6 +11,7 @@ let displayGrid = document.getElementById("grid");
 let displayList = document.getElementById("list");
 let priceHighToLow = document.getElementById("highToLow");
 let priceLowToHigh = document.getElementById("lowToHigh");
+let filtersContainer = document.getElementById("filters");
 
 // search: button, input
 let searchBtn = document.getElementById("search-btn");
@@ -131,6 +132,12 @@ categoriesBtn.addEventListener("click", () => {
     } else {
       categoriesList.style.display = "block";
     }
+  }
+
+  if (filtersContainer.style.display == "none") {
+    filtersContainer.style.display = "flex";
+  } else {
+    filtersContainer.style.display = "none";
   }
 });
 
