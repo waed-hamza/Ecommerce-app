@@ -1,3 +1,8 @@
+import { filterProducts } from "./testsFunctions.js";
+import { removeProductFromProductsData } from "./testsFunctions.js";
+import { addProductToProductsArray } from "./testsFunctions.js";
+import { editProductsData } from "./testsFunctions.js";
+
 let productsData = JSON.parse(localStorage.getItem("productsData"));
 let productsContainer = document.getElementById("products");
 
@@ -87,33 +92,18 @@ searchInput.addEventListener("input", (e) => {
   displayProducts(filteredProducts);
 });
 
-const filterProducts = (searchInput) => {
-  return productsData.filter((el) => {
-    return el.category
-      .toLocaleLowerCase()
-      .includes(searchInput.toLocaleLowerCase());
-  });
-};
-
 // delet btn clicked
 for (let i = 0; i < deleteProductBtn.length; i++) {
   deleteProductBtn[i].addEventListener("click", (e) => {
     // remove deleted product from productsData array
     let productName = e.target.parentNode.previousSibling.innerText;
-    removeProductFromProductsData(productName);
+    productsData = removeProductFromProductsData(productsData, productName);
+
+    localStorage.setItem("productsData", JSON.stringify(productsData));
+    displayProducts(productsData);
+    location.reload();
   });
 }
-
-// remove deleted product from productsData array
-const removeProductFromProductsData = (productName) => {
-  productsData = productsData.filter((product) => {
-    return product.name != productName;
-  });
-
-  localStorage.setItem("productsData", JSON.stringify(productsData));
-  displayProducts(productsData);
-  location.reload();
-};
 
 // buyer Btn clicked
 buyerBtn.addEventListener("click", () => {
@@ -152,7 +142,7 @@ saveBtn.addEventListener("click", (e) => {
   obj.name = productNameInput.value;
   obj.category = productCategoryInput.value;
 
-  productsData.push(obj);
+  productsData = addProductToProductsArray(productsData, obj);
   localStorage.setItem("productsData", JSON.stringify(productsData));
   displayProducts(productsData);
 });
@@ -207,20 +197,7 @@ saveChangesBtn.addEventListener("click", (e) => {
   obj.name = productNameInput.value;
   obj.category = productCategoryInput.value;
 
-  editProductsData(obj);
-});
-
-// edit products data array
-const editProductsData = ({ name, price, imgSrc, category }) => {
-  for (let i = 0; i < productsData.length; i++) {
-    if (productsData[i].name == name) {
-      productsData[i].price = price;
-      productsData[i].imgSrc = imgSrc;
-      productsData[i].category = category;
-      break;
-    }
-  }
-
+  productsData = editProductsData(productsData, obj);
   localStorage.setItem("productsData", JSON.stringify(productsData));
   displayProducts(productsData);
-};
+});

@@ -1,3 +1,7 @@
+import { filterByPriceLowToHigh } from "./testsFunctions.js";
+import { filterByPriceHighToLow } from "./testsFunctions.js";
+import { filterProducts } from "./testsFunctions.js";
+
 const initialProducts = JSON.parse(localStorage.getItem("productsData"));
 let productsContainer = document.getElementById("products");
 
@@ -29,7 +33,6 @@ let addedItems = JSON.parse(sessionStorage.getItem("addedItems"));
 
 // seller, buyer buttons
 let sellerBtn = document.getElementById("seller");
-let buyerBtn = document.getElementById("buyer");
 
 // JavaScript anonymous function
 (() => {
@@ -106,15 +109,13 @@ displayList.addEventListener("click", () => {
 });
 
 priceLowToHigh.addEventListener("click", () => {
-  let products = [...initialProducts];
-  products.sort((a, b) => parseInt(a.price) - parseInt(b.price));
+  let products = filterByPriceLowToHigh(initialProducts);
 
   displayProducts(products);
 });
 
 priceHighToLow.addEventListener("click", () => {
-  let products = [...initialProducts];
-  products.sort((a, b) => parseInt(b.price) - parseInt(a.price));
+  let products = filterByPriceHighToLow(initialProducts);
 
   displayProducts(products);
 });
@@ -124,23 +125,15 @@ searchBtn.addEventListener("click", () => {
   if (searchInput.value.length == 0) {
     searchInput.focus();
   } else {
-    let filteredProducts = filterProducts(searchInput.value);
+    let filteredProducts = filterProducts(searchInput.value, initialProducts);
     displayProducts(filteredProducts);
   }
 });
 
 searchInput.addEventListener("input", (e) => {
-  let filteredProducts = filterProducts(e.target.value);
+  let filteredProducts = filterProducts(e.target.value, initialProducts);
   displayProducts(filteredProducts);
 });
-
-const filterProducts = (searchInput) => {
-  return initialProducts.filter((el) => {
-    return el.category
-      .toLocaleLowerCase()
-      .includes(searchInput.toLocaleLowerCase());
-  });
-};
 
 // Categories btn clicked
 categoriesBtn.addEventListener("click", () => {
@@ -164,7 +157,7 @@ categoriesBtn.addEventListener("click", () => {
 // Filter by categories
 categoriesList.addEventListener("click", (e) => {
   let clickedCategory = e.target.innerText.toLocaleLowerCase();
-  let filteredProducts = filterProducts(clickedCategory);
+  let filteredProducts = filterProducts(clickedCategory, initialProducts);
 
   displayProducts(filteredProducts);
 });

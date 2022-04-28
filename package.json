@@ -2,7 +2,7 @@
   "name": "ecommerce-app",
   "version": "1.0.0",
   "description": "",
-  "main": "test.js",
+  "main": "./scripts/landing.js",
   "scripts": {
     "test": "jest --watchAll"
   },
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/waed-hamza/Ecommerce-app#readme",
   "dependencies": {
     "jest": "^27.5.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11"
   }
 }
