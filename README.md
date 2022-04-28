@@ -43,6 +43,16 @@ Mainly it consist of three pages:
  **Go Live**
 
  <br>
+
+ - To Run tests:
+    - In terminal, type:
+    ```
+    - npm init
+    - npm run test
+    ```
+
+ <br>
+
  - Visit live [App][1]
 
 <br><br>
